@@ -50,6 +50,9 @@ public class TesteSelenium {
         driver.get("http://localhost:3000/produto");
         Thread.sleep(3000);
         assertTrue(driver.findElement(By.className("titulo")).getText().contentEquals("Produtos"), "Titulo Diferente");
+        Thread.sleep(3000);
+        driver.get("http://localhost:3000/tipo");
+        assertTrue(driver.findElement(By.className("titulo")).getText().contentEquals("Tipos de Produtos"), "Titulo Diferente");
     }
 
 
